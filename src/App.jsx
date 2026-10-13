@@ -144,7 +144,7 @@ const TERMINAL_COMMANDS = {
   ],
   contacts: [
     { key: 'github', val: 'github.com/faketri33' },
-    { key: 'email', val: 'faketri@proton.me' }
+    { key: 'email', val: 'dmitriyvilkov33@gmail.com' }
   ]
 };
 
