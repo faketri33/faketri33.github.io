@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Github,
   Mail,
@@ -41,10 +41,13 @@ const MAIN_SKILLS = [
 
 const ADDITIONAL_TOOLS = ['systemd', 'D-Bus', 'RPM packaging', 'Qt Jambi', 'PostgreSQL', 'Docker', 'Redis', 'РЕД ОС'];
 
+const BASE = import.meta.env.BASE_URL;
+
 const FEATURED_PROJECTS = [
   {
     id: 'jsupervisor',
     title: 'JSupervisor',
+    img: `${BASE}jsup.png`,
     badge: 'В работе',
     desc: 'Менеджер процессов: YAML-конфиг, политики перезапуска, живые логи и десктопные уведомления.',
     tech: 'Java 21 · Systemd API',
@@ -55,6 +58,7 @@ const FEATURED_PROJECTS = [
   {
     id: 'cremniy',
     title: 'Cremniy',
+    img: `${BASE}cremniy.svg`,
     badge: 'Участник',
     desc: 'Open-source IDE для низкоуровневой разработки: редактор кода и HEX-просмотр в одном приложении.',
     tech: 'C++ · Qt 6 · ELF/PE',
@@ -659,7 +663,7 @@ Requires:   java-21-openjdk
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-[#171d29] border border-[#283244] flex items-center justify-center text-xs text-blue-400 font-mono font-bold">
-                          {proj.title[0]}
+                          <img src={proj.img}/>
                         </div>
                         <h3 className="text-base font-medium text-white group-hover:text-blue-300 transition-colors">
                           {proj.title}
