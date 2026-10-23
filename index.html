@@ -1,12 +1,26 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dmitriy Vilkov — Portfolio</title>
+    <title>Dmitriy Vilkov — Java, C++/Qt and developer tooling</title>
+    <meta
+      name="description"
+      content="Portfolio of Dmitriy Vilkov, a Java developer at RED SOFT: system and applied software, RPM packaging for RED OS, and native developer tools in C++ and Qt."
+    />
+    <meta name="theme-color" content="#F6F5F1" />
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="bg-[#0b0d10] text-gray-300">
+  <body>
     <div id="root"></div>
+    <noscript>This site needs JavaScript. Source and contacts: https://github.com/faketri33 · https://t.me/faketri</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
